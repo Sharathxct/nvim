@@ -156,13 +156,16 @@ return { -- LSP Configuration & Plugins
     --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
     local servers = {
       -- clangd = {},
-      -- gopls = {},
+      gopls = {},
       -- pyright = {},
       rust_analyzer = {
         settings = {
           ['rust-analyzer'] = {
-            checkOnSave = {
+            check = {
               command = 'clippy',
+            },
+            diagnostics = {
+              enable = true,
             },
           },
         },
@@ -173,8 +176,9 @@ return { -- LSP Configuration & Plugins
       --    https://github.com/pmizio/typescript-tools.nvim
       --
       -- But for many setups, the LSP (`tsserver`) will work just fine
-      tsserver = {},
+      ts_ls = {},
       --
+      -- prisma_ls = {},
 
       lua_ls = {
         -- cmd = {...},

@@ -54,3 +54,5 @@ vim.keymap.set('n', '<leader>|', '<C-W>v', { desc = 'Split Window Right', remap 
 
 -- vim.keymap.set('n', '<leader>ct', ':Telescope colorscheme<cr>')
 -- vim.keymap.set('n', '<leader>l', ':Lazy<cr>')
+
+vim.api.nvim_set_keymap("i", "jk", "<Esc>", { noremap = true })
